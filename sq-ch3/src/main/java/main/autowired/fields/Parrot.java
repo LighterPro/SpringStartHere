@@ -1,11 +1,12 @@
-package main.not_direct_wiring;
+package main.autowired.fields;
 
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+
 @Component
-public class Person {
+public class Parrot {
     private String name;
-    private Parrot parrot;
 
     public String getName() {
         return name;
@@ -15,19 +16,15 @@ public class Person {
         this.name = name;
     }
 
-    public Parrot getParrot() {
-        return parrot;
-    }
-
-    public void setParrot(Parrot parrot) {
-        this.parrot = parrot;
+    @PostConstruct
+    private void initttt() {
+        this.name = "Lulu";
     }
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Parrot {" +
                 "name='" + name + '\'' +
-                ", parrot=" + parrot +
                 '}';
     }
 }

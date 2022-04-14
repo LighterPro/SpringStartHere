@@ -1,31 +1,29 @@
-package main.not_direct_wiring;
+package main.autowired.setters;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Person {
-    private String name;
+    private String name = "Olya";
     private Parrot parrot;
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public Parrot getParrot() {
         return parrot;
     }
 
+    @Autowired
     public void setParrot(Parrot parrot) {
         this.parrot = parrot;
     }
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Person {" +
                 "name='" + name + '\'' +
                 ", parrot=" + parrot +
                 '}';

@@ -1,4 +1,4 @@
-package main.autowired;
+package main.autowired.qulifier;
 
 public class Parrot {
     private String name;

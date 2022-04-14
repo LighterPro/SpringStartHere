@@ -1,14 +1,11 @@
-package main.not_direct_wiring;
+package main.autowired.qulifier;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-        var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
+        var context = new AnnotationConfigApplicationContext(Config.class);
         Person person = context.getBean(Person.class);
-        Parrot parrot = context.getBean("parrot12343",Parrot.class);
         System.out.println(person);
-        System.out.println(parrot);
-
     }
 }

@@ -15,20 +15,21 @@ public class ProjectConfig_Beans {
         return p;
     }
 
-    @Bean
-    @Primary
+    @Bean(name = "L")
+    Parrot parrot3() {
+        var p = new Parrot();
+        p.setName("Riki");
+        return p;
+    }
+
+    @Bean(name = "L")
     Parrot parrot2() {
         var p = new Parrot();
         p.setName("Miki");
         return p;
     }
 
-    @Bean
-    Parrot parrot3() {
-        var p = new Parrot();
-        p.setName("Riki");
-        return p;
-    }
+
 
     @Bean
     String helloString() {
