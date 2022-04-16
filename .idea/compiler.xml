@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="sq-ch2-ex1" />
         <module name="chapter-04" />
+        <module name="sq-ch5" />
         <module name="sq-ch3" />
         <module name="sq-ch2-ex2" />
       </profile>
